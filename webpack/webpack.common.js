@@ -32,8 +32,7 @@ module.exports = {
     new HtmlWebpackPlugin({ gameName: 'ACT Web Template', template: 'src/index.html' }),
     new CopyWebpackPlugin([
       { from: 'src/assets', to: 'assets' },
-      { from: 'src/favicon.ico', to: '' },
-      { from: 'src/icons/*.png', to: 'icons'}
+      { from: 'src/icons/', to: 'icons'}
     ])
   ]
 }
