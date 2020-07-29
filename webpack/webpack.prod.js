@@ -3,6 +3,7 @@ const merge = require('webpack-merge')
 const common = require('./webpack.common')
 const JavaScriptObfuscator = require('webpack-obfuscator')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const prod = {
   mode: 'production',
@@ -11,6 +12,17 @@ const prod = {
     chunkFilename: '[name].[contenthash].chunk.js'
   },
   optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          output: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+    ],
     splitChunks: {
       cacheGroups: {
         commons: {

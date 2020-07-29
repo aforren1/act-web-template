@@ -12,17 +12,14 @@
 
     <link rel="manifest" href="./manifest.json" />
 
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="<%= htmlWebpackPlugin.options.gameName %>" />
-    <meta name="apple-mobile-web-app-title" content="<%= htmlWebpackPlugin.options.gameName %>" />
     <meta name="msapplication-starturl" content="./" />
 
-    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icons-192.png" />
-    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./icons/icons-192.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/android-chrome-192x192.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./icons/apple-touch-icon.png" />
 
-    <link rel="icon" type="image/png" sizes="512x512" href="./icons/icons-512.png" />
-    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./icons/icons-512.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./icons/android-chrome-512x512.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./icons/android-chrome-512x512.png" />
 
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 
@@ -30,22 +27,18 @@
     <style>
       html,
       body {
-        height: 100%;
-        margin: 0;
-        background-color: #000000;
+          margin: 0px;
+          padding: 0px;
+          overflow: hidden;
+          height: 100%;
+      }
+      .tabContent {
+      display:none;
       }
     </style>
 
     <noscript>Please enable javascript to continue using this application.</noscript>
 
-    <!-- installs the serviceWorker -->
-    <!-- <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js')
-        })
-      }
-    </script> -->
   </head>
   <body>
     <div id="phaser-game"></div>
