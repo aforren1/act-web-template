@@ -58,6 +58,6 @@
     "phaser": "^3.24.1",
     "socket.io-client": "2.3.0",
     "devtools-detect": "3.0.1",
-    "ua-parser-js": "0.7.21"
+    "ua-parser-js": "0.7.24"
   }
 }
